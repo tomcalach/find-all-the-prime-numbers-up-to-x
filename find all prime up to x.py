@@ -1,0 +1,20 @@
+def find_all_prime_upto_x(x):
+    """
+    the function finds all the prime numbers up to the int x
+    :param x: int
+    :return: list of ints
+    """
+    primes = []
+    for integer in range(1, x+1, 2):
+
+        check = 3
+        while check <= integer**0.5:
+            if integer % check == 0:
+                break
+            check += 2
+
+        if check > integer**0.5:
+            primes.append(integer)
+
+    return primes
+

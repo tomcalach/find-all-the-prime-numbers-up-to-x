@@ -4,8 +4,8 @@ def find_all_prime_upto_x(x):
     :param x: int
     :return: list of ints
     """
-    primes = []
-    for integer in range(1, x+1, 2):
+    primes = [2]
+    for integer in range(3, x+1, 2):
 
         check = 3
         while check <= integer**0.5:
